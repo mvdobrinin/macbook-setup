@@ -4,15 +4,6 @@ Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist
 
 If there are steps that you've noticed that I'm clearly missing, please let me know. If you want to fork this guide to make your own, go right ahead!
 
-## Before Reformat
-
-I generally am doing this because I'm reformatting an old computer because I have a problem (usually the computer, always me). I sometimes forget that there are more than files to backup, since not everything syncs perfectly. Here's what I need to remember to sync and where they live.
-
-- Chrome - OneTab should be bookmarked, and the rest Chrome syncs itself
-- iTerm2 - Syncing preferences to Dropbox
-- VS Code - Syncs with VsCode sync built in feature
-
-
 ## Install Basic Software
 
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
@@ -74,33 +65,18 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 - Make zsh the default shell for the current user with `chsh -s $(which zsh)`
 - Setup changes to the .zshrc file to config for our usage
 
-#### Make some aliases
-My current zsh profile with my aliases is backed up with Mackup now, but just in case these are needed
+### Set up VSCode
+
+Go to Code - Settings... - Turn on Settings Sync...
+Sign in with Github
 
 ### Set Up Applications
 
 - Login to Chrome & Firefox to download and setup extensions
-- Login to Dropbox and get files
-- Make dev files that I use open in VS Code (things like .txt, .sh, .json)
-- Setup Rectangle shortcuts so they don't interfere with Firefox shortcuts
-- Load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
-- I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.zshrc` file:
-```
-# Add my scripts folder to the path
-PATH=$PATH:~/Dropbox/scripts
-# Source stuff!
-source ~/.zshrc
-
-for f in ~/Dropbox/scripts/zsh/*; do
-	if [[ $file == *.sh ]]
-	then
-		source "$f"
-	fi
-done
-```
-
+- Login to Bitwarden
 
 ### Gitting on with Git
+
 - Xcode and git are installed, right?
 - If so, running `xcode-select --install` will get you the prompts for the Xcode Command Line Tools
 - Set some defaults up.
