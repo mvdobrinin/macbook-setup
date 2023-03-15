@@ -32,8 +32,6 @@ _Yes, you can run this all as one `brew install` command followed by the list of
 
 ```
 brew install git
-brew install grep
-brew install highlight
 brew install htop
 brew install nmap
 brew install openjdk
@@ -70,9 +68,19 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 Go to Code - Settings... - Turn on Settings Sync...
 Sign in with Github
 
+#### Install NodeJS and switcher tool
+
+We use [n tool](https://www.npmjs.com/package/n) to be able to install and support multiple NodeJS versions.
+
+```
+brew install npm
+npm i -g n
+sudo n latest
+```
+
 ### Set Up Applications
 
-- Login to Chrome & Firefox to download and setup extensions
+- Login to Chrome to download and setup extensions
 - Login to Bitwarden
 
 ### Gitting on with Git
@@ -83,17 +91,26 @@ Sign in with Github
 ```
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
-git config --global github.user githubusername
 git config --global push.default current
-git config --global init.defaultBranch "main"
-git config --global merge.conflictstyle diff3
-git config --global core.editor "code -wait"
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global init.defaultBranch "master"
 git config --global color.ui true
-git config --global color.diff-highlight.oldNormal    "red bold"
-git config --global color.diff-highlight.oldHighlight "red bold 52"
-git config --global color.diff-highlight.newNormal    "green bold"
-git config --global color.diff-highlight.newHighlight "green bold 22"
+```
+
+Also we an set up VSCode as an excellent merge tool.
+```
+git config --global --edit
+```
+
+And add the following
+```
+[merge]
+        tool = vscode
+[mergetool "vscode"]
+        cmd = code --new-window --wait $MERGED
+[diff]
+        tool = vscode
+[difftool "vscode"]
+        cmd = code --new-window --wait --diff $LOCAL $REMOTE                                                    
 ```
 
 - Check that keychain helper is installed with `git credential-osxkeychain` **Note:** if you installed git via HomeBrew, this is done for you. Skip to the `git config` step below.
@@ -119,30 +136,3 @@ ssh-keygen -t rsa -b 8192 -C "your@email.com"
 - [Add SSH key to Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 - Confirm that you're good to go
 `ssh -T git@github.com`
-
-## System Settings
-
-### General Settings
-
-- Turn off all stupid notifications and badges/banners/butchers of concentration
-- Set Firefox Developer Edition as the default browser
-- Set Recent items to none
-- Make dock nice and tiny
-- Set time format to 24-hour time
-- Change display energy saver settings
-- Set key repeat to fast and delay until repeat to short
-- Turn off keyboard brightness when computer is unused
-- Setup replacement texts (like yall) so it doesn't try autocorrecting my informalities
-- Set trackpad click to light, tracking speed to rather fast, and silent clicking
-- Turn off launchpad trackpad gesture
-- Setup internet accounts
-- Show bluetooth in control center
-- Show battery percentage in control center
-- Show date and time in menu bar
-- Ensure that guest account is off, and main account profile is set
-- Show all files including hidden ones `defaults write com.apple.finder AppleShowAllFiles YES;`
-- Make notification banners only display for three seconds, because ten is ridiculous. `defaults write com.apple.notificationcenterui bannerTime 3`
-- Change screenshots to jpg `defaults write com.apple.screencapture type jpg`
-
-
-At this point, you're probably done with computers, the internet, everything. At the very least, when you regain consciousness, your computer will be mainly good to go!
