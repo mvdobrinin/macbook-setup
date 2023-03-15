@@ -73,8 +73,7 @@ Sign in with Github
 We use [n tool](https://www.npmjs.com/package/n) to be able to install and support multiple NodeJS versions.
 
 ```
-brew install npm
-npm i -g n
+brew install n
 sudo n latest
 ```
 
