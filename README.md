@@ -41,19 +41,14 @@ brew tap homebrew/cask-fonts
 ```
 brew install iterm2
 brew install git
-brew install htop
 brew install nmap
-brew install openjdk
-brew install pipenv
+brew install pyenv
 brew install wget
-brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
 ```
 
 ##### Install applications via Homebrew Cask
-
-Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
 brew install font-roboto font-roboto-mono font-source-code-pro
@@ -69,12 +64,7 @@ Sign in with Github
 
 #### Install NodeJS and switcher tool
 
-We use [n tool](https://www.npmjs.com/package/n) to be able to install and support multiple NodeJS versions.
-
-```
-brew install n
-sudo n latest
-```
+We use [nvm tool](https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script) to be able to install and support multiple NodeJS versions.
 
 ### Set Up Applications
 
