@@ -31,16 +31,15 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
 ```
 
-##### Install Homebrew extension Cask
+##### Install common applications via Homebrew
+_Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
 
 ```
 brew tap homebrew/cask-fonts
 ```
 
-##### Install common applications via Homebrew
-_Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
-
 ```
+brew install iterm2
 brew install git
 brew install htop
 brew install nmap
@@ -59,8 +58,6 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 ```
 brew install font-roboto font-roboto-mono font-source-code-pro
 brew install --cask font-jetbrains-mono
-brew install iterm2
-
 ```
 
 ### Additional Command Line Installs
