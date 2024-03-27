@@ -9,9 +9,17 @@ If there are steps that you've noticed that I'm clearly missing, please let me k
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
 
 ### Install from App Store/Web
-- [VS Code](https://code.visualstudio.com/download)
 - [Monitor Control](https://github.com/MonitorControl/MonitorControl)
 - [Better Display](https://github.com/waydabber/BetterDisplay)
+
+  
+### Oh My ZSH!
+- Install a fancy zsh framework for funtimes
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
+- Setup changes to the .zshrc file to config for our usage
 
 ### Homebrew
 
@@ -19,6 +27,8 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/opt/homebrew/bin/brew doctor
+echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
 ```
 
 ##### Install Homebrew extension Cask
@@ -54,14 +64,6 @@ brew install iterm2
 ```
 
 ### Additional Command Line Installs
-
-#### Oh My ZSH!
-- Install a fancy zsh framework for funtimes
-```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
-- Setup changes to the .zshrc file to config for our usage
 
 ### Set up VSCode
 
