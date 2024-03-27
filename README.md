@@ -1,26 +1,7 @@
-# mvdobrinin's Mac OS X 13.2 macOS Ventura Setup Guide
-
-Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
-
-If there are steps that you've noticed that I'm clearly missing, please let me know. If you want to fork this guide to make your own, go right ahead!
+# mvdobrinin's Mac OS X 14.3 macOS Sonoma Setup Guide
 
 ## Install Basic Software
-
-This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
-
-### Install from App Store/Web
-- [Monitor Control](https://github.com/MonitorControl/MonitorControl)
-- [Better Display](https://github.com/waydabber/BetterDisplay)
-
   
-### Oh My ZSH!
-- Install a fancy zsh framework for funtimes
-```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
-- Setup changes to the .zshrc file to config for our usage
-
 ### Homebrew
 
 ##### Install Homebrew
@@ -31,7 +12,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
 ```
 
-##### Install common applications via Homebrew
+### Install common applications via Homebrew
 _Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
 
 ```
@@ -48,12 +29,20 @@ brew install zsh-completions
 brew install zsh-syntax-highlighting
 ```
 
-##### Install applications via Homebrew Cask
+### Install applications via Homebrew Cask
 
 ```
 brew install font-roboto font-roboto-mono font-source-code-pro
 brew install --cask font-jetbrains-mono
 ```
+
+### Oh My ZSH!
+- Install a fancy zsh framework for funtimes
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
+- Setup changes to the .zshrc file to config for our usage
 
 ### Additional Command Line Installs
 
