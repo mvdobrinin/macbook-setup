@@ -36,6 +36,13 @@ brew install font-roboto font-roboto-mono font-source-code-pro
 brew install --cask font-jetbrains-mono
 ```
 
+### DB tools for Postgres
+
+```
+brew install libpq
+echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
+```
+
 ### Oh My ZSH!
 - Install a fancy zsh framework for funtimes
 ```
