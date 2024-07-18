@@ -23,6 +23,7 @@ brew tap homebrew/cask-fonts
 brew install iterm2
 brew install git
 brew install nmap
+brew install jenv
 brew install pyenv
 brew install wget
 brew install zsh-completions
@@ -57,6 +58,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 Go to Code - Settings... - Turn on Settings Sync...
 Sign in with Github
+
+### Install JDKs
+
+Download JDKs of choice. For example through IJ.
+
+```
+jenv add /Users/dobrim1/Library/Java/JavaVirtualMachines/corretto-17.0.10/Contents/Home
+```
 
 #### Install NodeJS and switcher tool
 
